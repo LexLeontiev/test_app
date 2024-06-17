@@ -29,6 +29,10 @@ internal open class MyMarkerComponent(
         labelFormatter = MyLabelFormatter
     }
 
+    @Deprecated(
+        "Use the version of `draw` that takes a `ChartValuesProvider` as an argument.",
+        replaceWith = ReplaceWith("draw(context, bounds, markedEntries, chartValuesProvider)")
+    )
     override fun draw(
         context: DrawContext,
         bounds: RectF,
@@ -54,7 +58,6 @@ internal open class MyMarkerComponent(
         bounds: RectF,
         markedEntries: List<Marker.EntryModel>
     ): Unit = with(context) {
-//        val text = labelFormatter.getLabel(markedEntries)
         val text = ""
         val entryX = markedEntries.averageOf { it.location.x }
         val labelBounds = label.getTextBounds(context, text, outRect = tempBounds2)

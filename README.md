@@ -20,7 +20,7 @@ Kotlin + Coroutines + Retrofit + Cicerone + Compose(partially)
 - Points on the graph should be plotted in increasing order of the x-coordinate. [✔️] 
 
 ### Additional Features (Optional)
-- Allow user to zoom in and out of the graph. [ ️]
-- Connect points with a smoothed line instead of a straight line. [ ️]
+- Allow user to zoom in and out of the graph. [✔️]️
+- Connect points with a smoothed line instead of a straight line. [✔️]️
 - Support both portrait and landscape screen orientations. [✔️]️
 - Save the graph image to a file. [ ️] 

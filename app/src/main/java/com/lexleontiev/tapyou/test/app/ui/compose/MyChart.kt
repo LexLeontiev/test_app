@@ -14,7 +14,7 @@ import com.lexleontiev.tapyou.test.app.ui.ResultScreenState
 import com.patrykandpatrick.vico.compose.chart.Chart
 import com.patrykandpatrick.vico.compose.chart.line.lineChart
 import com.patrykandpatrick.vico.compose.chart.scroll.rememberChartScrollSpec
-import com.patrykandpatrick.vico.core.chart.line.LineChart
+import com.patrykandpatrick.vico.core.chart.layout.HorizontalLayout
 import com.patrykandpatrick.vico.core.entry.entryModelOf
 import com.patrykandpatrick.vico.core.entry.entryOf
 import com.patrykandpatrick.vico.core.extension.floor
@@ -51,15 +51,16 @@ fun ChartView(
             Chart(
                 modifier = Modifier.padding(all = 12.dp),
                 chart = lineChart(
-                    pointPosition = LineChart.PointPosition.Center,
                     persistentMarkers = markersMap
                 ),
                 model = chartEntryModel,
                 topAxis = null,
                 bottomAxis = null,
                 endAxis = null,
-                chartScrollSpec = rememberChartScrollSpec(isScrollEnabled = false),
-                isZoomEnabled = false
+                chartScrollSpec = rememberChartScrollSpec(isScrollEnabled = true),
+                isZoomEnabled = true,
+                horizontalLayout = HorizontalLayout.FullWidth(),
+                getXStep = { (it.maxX - it.minX) / 3 }
             )
         }
     }
