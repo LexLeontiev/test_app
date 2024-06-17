@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Test App</string>
+    <string name="title">Введите кол-во точек для графика</string>
+    <string name="factorial_hint">Кол-во точек</string>
+    <string name="compute">Поехали</string>
+    <string name="loading">Идет загрузка…</string>
+    <string name="please_enter_a_number">Введите число</string>
+    <string name="error">Произошла ошибка. Попробуйте еще раз</string>
+    <string name="x">X</string>
+    <string name="y">Y</string>
+</resources>
